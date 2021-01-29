@@ -9,41 +9,6 @@ body{
 }
 
 /* menu */
-
-/* .nav{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    position:sticky;
-    top:0;
-    
-}
-ul{
-    display: grid;
-    grid-template-columns: 20% 20% 22% 13% 25%;
-    list-style: none;
-    background: #020b3b;
-    text-align: center;
-}
-.logo{
-    text-align: center;
-    padding: 20px;
-    font-size: 25px;
-    background: #fff;
-}
-ul li{
-    padding: 20px;
-}
-ul li:hover{
-    background: aqua;
-}
-ul li a{   
-
-    text-decoration: none;
-    color: #fff;
-    padding: 20px 10px;
-    font-size: 20px;
-    text-align: center;
-} */
 .logo{
     height: 8vh;
     width: 20%;
@@ -51,9 +16,10 @@ ul li a{
 }
 .nav{
     display: flex;
+    background: #fff;
     position: sticky;
     top: 0;
-    background: #fff;
+    z-index: 99;
 }
 ul{
     width: 100%;
@@ -78,6 +44,9 @@ ul li a{
 }
 
 @media screen and (max-width:600px){
+    .nav{
+        flex-direction: column;
+    }
     .logo,ul li{
         width: 100%;
         height: 5vh;
@@ -88,10 +57,6 @@ ul li a{
         flex-direction: column;
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
     }
-    .nav{
-        flex-direction: column;
-        position: absolute;
-    }
 }
 
 @media (min-width:600px)  and (max-width:1000px){
@@ -101,9 +66,6 @@ ul li a{
         font-size: 19px;
     }
     .nav{
-        display: flex;
-        position: sticky;
-        top: 0;
         background: #fff;
     }
     ul{
@@ -136,9 +98,6 @@ ul li a{
         font-size: 25px;
     }
     .nav{
-        display: flex;
-        position: sticky;
-        top: 0;
         background: #fff;
     }
     ul{
@@ -311,7 +270,7 @@ ul li a{
 .title{
     padding-left: 10px;
     margin: 20px 0px;
-    background:#020b3b;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
     color: #fff;
     
 }
@@ -356,8 +315,10 @@ ul li a{
     border: 2px solid  #fff;
     height: 80vh;
     margin-right: 20px;
-    background-color: #020b3b;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+
 }
+
 @media screen and (max-width:600px){
     .content_about{
         display: flex;
@@ -373,8 +334,15 @@ ul li a{
         width: 100%;
         margin: 0;
         padding: 0;
+        height: 160vh;
     }
+    .paragraph h1{
+        font-size: 30px;
+    }
+    
 }
+
+
 @media (min-width:600px) and (max-width:1000px){
     .content_about{
         display: flex;
@@ -412,7 +380,7 @@ ul li a{
         border: 2px solid  #fff;
         height: 80vh;
         margin-right: 20px;
-        background-color: #020b3b;
+        background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
     }
 }
 @media screen and (min-width:1000px){
@@ -441,7 +409,7 @@ ul li a{
         color: #fff;
     }
     .paragraph p{
-        font-size: 20px;
+        font-size: 30px;
         color: #fff;
     }
     
@@ -455,123 +423,180 @@ ul li a{
     }
 }
 /*education*/
-.background{
+
+.card-content{
     display: flex;
-    width: 100%;
-    height: 80vh;
-    justify-content:center
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
 }
-.background .main_box{
+.card{
+    border:3px solid rgb(240, 227, 227);
+    border-radius: 30px;
+    height: 70vh;
+    box-shadow: 0 0 15px;
+}
+.card img{
+    border:3px solid rgb(190, 182, 182);
+    border-radius: 30px 30px 0 0;
+    width: 50vh;
+    height: 45vh;
+    box-shadow: 0 0 20px;
+}
+.card-text{
+
+    width: 50vh;
+    font-size: 25px;
+    height: 10vh;
+    margin-top: 10px;
+}
+
+.card-button{
+    width:50vh;
+    height:10vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    
 }
-.background .pnc,.kralanh,.northon{
-    width: 25%;
-    height: 100%;
-    background:rgb(1, 1, 66);
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 0 4px;
-    margin-right: 30px;
+.card-button button{
+    font-size: 25px;
+    padding: 20px;
+    background: gray;
+    border:none;
+    border-radius: 10px;
+    margin-top: 15px;
 }
-.background .box{
-    width: 90%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background:#fff;
-    box-shadow: 0 0 5px;
-    margin-top:10px;
-}
-.background img{
-    width: 90%;
-    height: 44vh;
-    padding-top:10px;
-} 
-.background p{
-    margin: 20px;
-}
-.background button{
-    padding: 13px;
-    margin-bottom: 30px;
-    font-size: 20px;
-}
-@media screen and (max-width:600px){
-    .education{
-        height: 200vh;
-    }
-    .background{
+@media screen and (max-width:650px){
+    .card-content{
         display: flex;
         flex-direction: column;
+        height: 300vh;
     }
-    .background .box{
-        width: 50%;
+    .card{
+        height: 80vh;
     }
-}
-@media (min-width:600px) and (max-width:1000px){
+    .card-text{
+        font-size: 20px;
+    }
+    .card-button{
+        margin-top: 40px;
+    }
+    .card-button button{
+        padding: 10px;
+    }
+    
     
 }
-@media screen and (min-width:1000px){
-    
+@media (min-width:650px) and (max-width:1000px){
+    .card{
+        width: 35vh;
+    }
+    .card-image img{
+        width: 98%;
+    }
+    .card-text{
+        font-size: 13px;
+        width: 100%;
+    }
+    .card-button{
+        width: 30vh;
+        height: 10vh;
+    }
+    .card-button button{
+        font-size: 15px;
+        padding:10px;
+    }
+}
+@media (max-width:1450px) and (min-width:1000px){
+    .card{
+        width: 60vh;
+        height: 80vh;
+    }
+    .card-image img{
+        width: 99%;
+    }
+    .card-text{
+        font-size: 20px;
+        width: 100%;
+    }
+    .card-button{
+        width: 100%;
+        height: 10vh;
+        
+    }
+    .card-button button{
+        font-size: 18px;
+        padding:18px;
+        margin-top: 40px;
+    }
 }
 /*skill*/
 .main_course{
     display: flex;
-    width: 100%;
-}
-.course{
-    flex: 20%;
-    display: flex;
     flex-direction: column;
-}
-.course .box{
-    width: 90%;
-    border:3px solid #fff;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 0 10px;
-    margin-left: 50px;
 
 }
-.course img{
-    width: 100%;
-    height: 30vh;
-    padding: 10px;
+.repository{
+    display: flex;
+
 }
-.course p{
-    text-transform: uppercase;
+.box{
+    flex: 30%;
+    border: 3px solid gray;
+    box-shadow: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 10px 10px 0px;
+}
+.box img{
+    width: 100%;
+    height: 90%;
+}
+.box p{
+    font-size: 35px;
 }
 .description{
-    flex:70%;
+    border:3px solid gray;
+    flex: 70%;
     display: flex;
-    flex-direction: column;
-}
-.description .text{
-    width: 90%;
-    height: 40vh;
-    margin:5px 0 0 80px;
-    display: flex;
-    align-items: center;
-    box-shadow:0 0 10px ;
     justify-content: center;
     flex-direction: column;
-
+    box-shadow: 0 0 20px;
+    margin: 10px 0px;
 }
-.description .text:nth-child(3){
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    padding: 0;
-}
-.description .text p{
-    margin:10px 30px;
+.description p{
     font-size: 30px;
+    padding: 30px;
+}
+@media screen and (max-width:800px){
+    .main_course{
+        display: flex;
+        flex-direction: column;
+    }
+    .repository{
+        display: flex;
+        flex-direction: column;
+    }
+    .description{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .description p{
+        font-size: 20px;
+    }
+    .box{
+        width: 100%;
+    }
+}
+@media (min-width:600px) and (max-width:800px){
+    
+}
+@media screen and (min-width:1000px){
+    
 }
 /* contact us */
 
@@ -583,7 +608,6 @@ ul li a{
 /* footer */
 .footer{
     width: 100%;
-    height: 40vh;
     background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
     display: flex;
     padding: 0;
@@ -631,7 +655,7 @@ ul li a{
 
 }
 .column2 textarea{
-    height: 45%;
+    height: 50%;
     margin:10px 0;
     padding: 5px;
     width: 97%;
@@ -649,7 +673,23 @@ ul li a{
     font-size: 30px;
     margin-top: 10px;
 }
-/* menu_footer */
+@media screen and (max-width:600px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .contact_by{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .column2 input{
+        margin-top: 4px;
+    }
+}
+
+
+/*copy right*/
 
 .copyright{
     background: rgba(0,0,0,0.9);
