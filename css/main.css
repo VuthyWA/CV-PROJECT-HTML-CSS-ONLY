@@ -46,6 +46,7 @@ ul li a{
 @media screen and (max-width:600px){
     .nav{
         flex-direction: column;
+        position: relative;
     }
     .logo,ul li{
         width: 100%;
@@ -305,15 +306,15 @@ ul li a{
     color: #fff;
 }
 .paragraph p{
-    font-size: 20px;
+    font-size: 20wv;
     color: #fff;
+    box-sizing: border-box;
 }
 
 .content_about .content{
     flex: 60%;
     display: flex;
     border: 2px solid  #fff;
-    height: 80vh;
     margin-right: 20px;
     background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
 
@@ -378,7 +379,6 @@ ul li a{
         flex: 60%;
         display: flex;
         border: 2px solid  #fff;
-        height: 80vh;
         margin-right: 20px;
         background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
     }
@@ -409,7 +409,6 @@ ul li a{
         color: #fff;
     }
     .paragraph p{
-        font-size: 30px;
         color: #fff;
     }
     
@@ -417,7 +416,6 @@ ul li a{
         flex: 60%;
         display: flex;
         border: 2px solid  #fff;
-        height: 80vh;
         margin-right: 20px;
         background-color: #020b3b;
     }
